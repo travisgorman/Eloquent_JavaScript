@@ -19,4 +19,19 @@ function chessBoard (size) {
   }
   console.log(output);
 }
+```  
+>######Pseudocode for Chess Board
+The logic for this pattern is all about whether the row is even/odd, and whether the  column is even/odd. I need a nested loop where the outer loop handles the size and scale, moving down the y axis, and the inner loop writes the pattern, moving across the x axis.
+
+- Outer Loop (iterates according to a `size` parameter - the number of rows and columns)
+  - does inner loop  
+  - adds new line break  
+  - increments `row`
+  
+- Inner Loop (controls pattern)  
+  - determines if row is odd or even
+  - determine if position (column) is odd or even  
+<  
+
+
 
