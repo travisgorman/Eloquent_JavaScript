@@ -1,5 +1,5 @@
 #### Chess Board   
-Write a program that creates a string representing an 8x8 grid with checkerboard pattern like a chess board.  
+Write a program that creates a string representing an 8x8 grid with checkerboard pattern of alternating #'s and whitespace.   
 ```js
 function chessBoard (size) {  
   var output = "";
