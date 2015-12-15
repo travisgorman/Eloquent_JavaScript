@@ -1,1 +1,27 @@
+# Sum Of A Range  
+### Part One: Range   
+Write a range function that takes two arguments, `start` and `end`, and returns an array containing all the numbers from `start` up to and including `end`.  
 
+```js
+function range (start, end) {
+  var rayRay = [];
+
+  while (end >= start) {
+    rayRay.unshift(end);
+    end = (end - 1);
+  }
+return rayRay;
+}
+```
+
+
+
+### Part Two: Sum
+Take in the `rayRay` array returned by the `range` function above, and returns the sum of all numbers.  
+
+
+
+
+
+
+### Part Three: Modified Range
