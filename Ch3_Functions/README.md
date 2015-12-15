@@ -52,10 +52,9 @@ function isEven(n) {
 
 ```
 
-This works fine for positive numbers, but if `n` is less than zero, we get `RangeError: Maximum call stack size exceeded`. The recursive calls to `isEven`, subtract 2 from `n` on and on, until finally Chrome says enough is enough. When the call stack was blown, `n` equals -15,581 - each call moving us further from our goal. We need to hit either one or zero, and that will never happen like this 
+This works for positive numbers, but if `n` is less than zero, we get `RangeError: Maximum call stack size exceeded`. The recursive calls to `isEven`, subtract 2 from `n` on and on, until Chrome says enough is enough.  
 
-We can address this problem by adding a line at the top of the conditional chain that converts `n` to its positive equivelant. 
-This works as long as `n` is a number between -15,580 and 15,580, a limitation based on the call stack limit for my current enviornment, the current version of Google Chrome.  
+When the call stack was blown, `n` equals -15,581 - each call moving us further from our goal. We need to hit either one or zero, and that will never happen this way.  We can account for negative numbers by adding a line at the top of the conditional chain that converts `n` to its positive equivelant. 
 
 ```js
 function isEven(n) {
@@ -75,5 +74,8 @@ function isEven(n) {
 }
 
 ```
+
+This works as long as `n` is a number between -15,580 and 15,580, a limitation based on the call stack limit for my current enviornment, the current version of Google Chrome.  
+
 ---
 
