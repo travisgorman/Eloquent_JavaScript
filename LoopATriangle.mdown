@@ -3,7 +3,7 @@ This an exercise illustrating how to do something a certain number of times. The
 
 The exercise says make 7 calls for a 7 story triangle, but I'd like to keep this flexible, so that will be a parameter called `num`. The arguement passed into `num` will tell the loop how many times to repeat.  
 
-On each call to console.log our output is growing in length by one "#", which is achieved by having a variable incrementing on every iteration before printing it to the console.   
+On each call to console.log our output is growing in length by one "#", which is achieved by having a variable that we concatenate to on every iteration before printing it to the console.   
 
 Since we want a bunch of different printouts, not a final printout, I know that my `console.log(str)` is inside the loop.   
 
