@@ -1,4 +1,4 @@
-#### Loop A Triangle   
+## Loop A Triangle   
 This an exercise illustrating how to do something a certain number of times. There is no conditional logic- just a repetitive task and the question of how many times you'd like it done.  
 
 The exercise says make 7 calls for a 7 story triangle, but I'd like to keep this flexible, so that will be a parameter called `num`. The arguement passed into `num` will tell the loop how many times to repeat.  
@@ -31,7 +31,7 @@ Pass in 7 for a triangle 7 rows tall, or any number to scale in size.
 
 ---
 
-#### Fizz Buzz
+## Fizz Buzz
 
 We know exactly what this function should do and what the result it produces should look like. 
 This is enough to know that the structure of this function is going to look like a For Loop with 4 conditional statements. 
@@ -65,7 +65,7 @@ Now the function has practically written itself. There are no parameters or vari
 ```
 ---
 
-#### Chess Board   
+## Chess Board   
 Write a program that creates a string representing an 8x8 grid with checkerboard pattern of alternating #'s and whitespace.   
 
 ```js
