@@ -1,6 +1,8 @@
 # Reversing an Array
 These two functions both involve reversing the order of elements in an array without using the reverse() method.  
 
+### Part One: reverseArray
+Produces a new array with all elements of the input element reversed.  
 ```js
 function reverseArray (arr) {
   var myArray = [];
