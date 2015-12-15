@@ -18,7 +18,21 @@ return rayRay;
 
 ### Part Two: Sum
 Take in the `rayRay` array returned by the `range` function above, and returns the sum of all numbers.  
+```js
+function sum (arr) {
+  var sum = 0;
 
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+```
+> ```js
+sum(range(1,10));
+// >> 55
+```
 
 
 
