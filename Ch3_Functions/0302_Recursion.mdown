@@ -1,4 +1,9 @@
 ## Recursion
+take a number parameter, and return a boolean. Check to see if number is even using recursion. 
+
+- Zero is even  
+- One is odd  
+- For any other number, its evenness is the same as (n - 2)  
 
 ```js
 function isEven(n) {
@@ -8,31 +13,26 @@ function isEven(n) {
   }
   else if (n === 1) {
     return false;
-  } else {
+  } 
+  else {
     return isEven(n-2);
   }
 
 }
 
 ```
+This works fine for positive numbers, but if `n` is any number less than zero, we get `RangeError: Maximum call stack size exceeded`. The recursive calls to `isEven`, subtract 2 from `n` on and on, until finally Chrome said enough is enough. When the call stack was blown, `n` equals -15,581.  We need to reach either zero or one, and instead each call only take us further from our goal.
 
-Zero is even
-One is odd
-For any other number, its evenness is the same as (n - 2)
+We can address the issue of negative numbers, by adding a line at the top of the conditional chain that converts `n` to its positive equivelant. Now we will eventually hit one or zero.  
+This works as long as `n` is a number between -1
 
-If `n` is any number less than zero, we get RangeError: Maximum call stack size exceeded. The final return statement continues calling the recursive `isEven`, subtracting 2 from `n` on and on, 15,580 times until finally Chrome said enough is enough. On every call, 2 was subtracted. By the time the stack was blown `n` equals -15,580.  We're trying to get to either zero or one, so more calls are just taking us further from our goal. Instead, we can address the issue of negative numbers, but starting the chain of conditionals with 
-
-```js
-if (n < 0) {
-  return isEven(-n)
-}
-```
-This way, by converting `n` to its positive equivelant, instead of moving further with each call, we will eventually hit one or zero. This works as long as `n` is a number between -15,580 and 15,580 as that is the call stack limit at the moment for the current version of Chrome. 
+Here is an updated version that works for all numbers between -15,580 and 15,580
+This limitation is based on the fact that 15,580 is the call stack limit at the moment for the current version of Chrome. 
 
 ```js
 function isEven(n) {
-  if (n < 0) {
-  return isEven(-n)
+  if (n < 0) {        /* if `n` is less than zero */
+  return isEven(-n)   /* convert it to its positive equivilant, and continue as usual down the chain of conditionals */
   }
   else if (n === 0) {
     return true;
@@ -46,3 +46,6 @@ function isEven(n) {
 
 }
 ```
+
+
+
