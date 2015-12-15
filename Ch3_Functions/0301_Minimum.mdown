@@ -14,7 +14,7 @@ function min(a, b) {
 This function pretty much reads like plain english. Pass in any two numbers as the `a` and `b` arguments, and if `a` is greater than `b`, return `b`. Otherwise return `a`.  
 
 ##### Minimum (using Math.min)
-Here is another version that uses the built-in Math.min method, which does the same thing as the function above, so here I assin a variable to the result of Math.min(x,y)
+Here is another version that uses the built-in Math.min method, which does the same thing as the function above, so here I assign a variable that is returned the result of `Math.min(x,y)`
 
 ```js
 function min(x,y){
