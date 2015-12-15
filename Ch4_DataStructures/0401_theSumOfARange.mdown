@@ -16,8 +16,7 @@ return rayRay;
 range(1,10);
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
-
-
+---
 
 ### Part Two: Sum
 Take in the `rayRay` array returned by the `range` function above, and returns the sum of all numbers.  
@@ -32,13 +31,10 @@ function sum (arr) {
 }
 
 ```
->> ```js
+>>```js
 sum(range(1,10));
-// >> 55
-```
+55
 
-
-
-
+---
 
 ### Part Three: Modified Range
