@@ -18,3 +18,10 @@ return myArray;
 > 1. Return `myArray`
 
 ---
+
+### Part Two: reverseArrayInPlace
+Modifies the original array in place rather than returning a new one.  
+
+```js
+
+```
