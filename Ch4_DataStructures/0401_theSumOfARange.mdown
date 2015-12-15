@@ -38,3 +38,13 @@ sum(range(1,10));
 ---
 
 ### Part Three: Modified Range
+This modified version of `range` takes a third parameter, `steps` that indicates the step value used to build up the array. My current  solution might not be build to do this properly, so I'll have to revise or build this from scratch. 
+
+```js
+function rangeMod(start, end, step) { 
+  code
+    goes 
+      here
+}
+
+```
