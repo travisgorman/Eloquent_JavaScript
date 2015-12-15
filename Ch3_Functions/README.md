@@ -26,7 +26,7 @@ function min(x,y){
 
 ---
 
-## Recursion
+# Recursion
 
 Take a number parameter and return a boolean. Check to see if number is even using recursion.
 
@@ -78,5 +78,5 @@ function isEven(n) {
 }
 
 ```
-
+---
 
