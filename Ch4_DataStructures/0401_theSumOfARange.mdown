@@ -29,7 +29,7 @@ function sum (arr) {
 }
 
 ```
-> ```js
+>> ```js
 sum(range(1,10));
 // >> 55
 ```
