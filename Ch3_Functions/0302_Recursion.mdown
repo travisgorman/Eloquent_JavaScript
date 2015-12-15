@@ -1,0 +1,48 @@
+## Recursion
+
+```js
+function isEven(n) {
+  
+  if (n === 0) {
+    return true;
+  }
+  else if (n === 1) {
+    return false;
+  } else {
+    return isEven(n-2);
+  }
+
+}
+
+```
+
+Zero is even
+One is odd
+For any other number, its evenness is the same as (n - 2)
+
+If `n` is any number less than zero, we get RangeError: Maximum call stack size exceeded. The final return statement continues calling the recursive `isEven`, subtracting 2 from `n` on and on, 15,580 times until finally Chrome said enough is enough. On every call, 2 was subtracted. By the time the stack was blown `n` equals -15,580.  We're trying to get to either zero or one, so more calls are just taking us further from our goal. Instead, we can address the issue of negative numbers, but starting the chain of conditionals with 
+
+```js
+if (n < 0) {
+  return isEven(-n)
+}
+```
+This way, by converting `n` to its positive equivelant, instead of moving further with each call, we will eventually hit one or zero. This works as long as `n` is a number between -15,580 and 15,580 as that is the call stack limit at the moment for the current version of Chrome. 
+
+```js
+function isEven(n) {
+  if (n < 0) {
+  return isEven(-n)
+  }
+  else if (n === 0) {
+    return true;
+  }
+  else if (n === 1) {
+    return false;
+  } 
+  else {
+    return isEven(n-2);
+  }
+
+}
+```
