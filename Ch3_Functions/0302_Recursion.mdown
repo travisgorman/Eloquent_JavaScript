@@ -21,8 +21,8 @@ function isEven(n) {
 }
 
 ```
-This works fine for positive numbers, but if `n` is any number less than zero, we get `RangeError: Maximum call stack size exceeded`.  
-The recursive calls to `isEven`, subtract 2 from `n` on and on, until finally Chrome says enough is enough. We need to eventually hit one or zero, and that will never happen here. With each recursive call to isEven, 2 is subtracted from `n` moving us further away in the wrong direction. 
+This works for positive numbers, but if `n` is less than zero, we get `RangeError: Maximum call stack size exceeded`.  
+The recursive calls to `isEven`, subtract 2 from `n` on and on, until finally Chrome says enough is enough. We need to eventually hit one or zero, and that will never happen here.  
 
 We can address the issue of negative numbers, by adding a line at the top of the conditional chain that converts `n` to its positive equivelant. Now we will eventually hit one or zero.  
 This works as long as `n` is a number between -1
