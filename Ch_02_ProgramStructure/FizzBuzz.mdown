@@ -1,0 +1,32 @@
+#### Fizz Buzz
+
+We know exactly what this function should do and what the result it produces should look like. 
+This is enough to know that the structure of this function is going to look like a For Loop with 4 conditional statements. 
+We need to make 100 calls to console.log, printing one of four different things depending on our criteria. The possible outcomes are:
+
+- Divisible by 3 & 5 
+  * `console.log("fizzBuzz")`
+- Divisible by 3 
+  * `console.log("Buzz")`
+- Divisible by 5
+  * `console.log("fizz")`
+- Divisible by neither 
+  * `console.log(i)`
+
+Now the function has practically written itself. There are no parameters or variables and it's not very flexible, only a set of criteria and instructions. You either want a fizzBuzz or you don't, so I have wrapped it up as an IIFE just for fun. It would do just fine if I didn't, but why not. 
+
+```js
+(function fizzBuzz(){
+    for (var i = 0; i < 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+              console.log("fizzBuzz");
+            }
+        else if (i % 5 === 0) {
+              console.log("Buzz");
+            }
+        else if ( i % 3 === 0) {
+              console.log("fizz");
+            }
+        else console.log(i);
+} })();
+```
