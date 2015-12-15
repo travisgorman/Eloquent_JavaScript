@@ -29,6 +29,8 @@ loopATriangle(7);
 ```
 Pass in 7 for a triangle 7 rows tall, or any number to scale in size.   
 
+---
+
 #### Fizz Buzz
 
 We know exactly what this function should do and what the result it produces should look like. 
@@ -61,6 +63,7 @@ Now the function has practically written itself. There are no parameters or vari
         else console.log(i);
 } })();
 ```
+---
 
 #### Chess Board   
 Write a program that creates a string representing an 8x8 grid with checkerboard pattern of alternating #'s and whitespace.   
@@ -86,7 +89,6 @@ function chessBoard (size) {
 }
 ```  
 
->######Pseudocode for Chess Board
 The logic for this pattern is all about whether the row is even/odd, and whether the  column is even/odd. I need a nested loop where the outer loop handles the size and scale, moving down the y axis, and the inner loop writes the pattern, moving across the x axis.
 
 - Outer Loop (iterates according to a `size` parameter - the number of rows and columns)
@@ -123,5 +125,3 @@ if ((j + row) % 2 === 0){
 ```js
   console.log(output);
 ```
-
-
