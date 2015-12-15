@@ -23,5 +23,25 @@ return myArray;
 Modifies the original array in place rather than returning a new one.  
 
 ```js
+function reverseArrayInPlace (arr) {
+  var half = arr.length /2;
+  half = Math.floor(half);
 
+  for (var i = 0; i < half; i++) {
+    var temp = arr[i];
+    arr[i] = arr[arr.length -1 -i];
+    arr[arr.length -1 -i] = temp;
+  }
+  return arr;
+}
 ```
+1. Swap first and last elements, then swap second and second-to-last...
+1. You wont need to touch the middle element if the array is odd
+1. Loop over **half the length** of the array 
+  * `var half = arr.length / 2`  Cleft this array in twain
+  * `half = Math.floor(half);` Round it down to whole number
+1. Swap element at position `i` with the one at position `array.length -1 -i`
+1. Use a local variable, `temp` to 
+  * hold onto one of the elements, 
+  * overwrite it with its mirror image, 
+  * and put the value from the local variable in the place where the mirror image used to be. 
