@@ -1,0 +1,40 @@
+# A List
+==============================
+A list is a nested set of objects, with the first object holding a reference to the second, the second to the third, and so on.
+The resulting objects form a chain.  
+
+### Part One: arrayToList
+builds up a data structure like the previous one when given [1, 2, 3] as argument.  
+
+```js
+
+```
+
+### Part Two: listToArray
+produces an array from a list.  
+
+```js
+
+```
+
+### Helper Function: prepend
+takes an element and a list and creates a new list that adds the element to the front of the input list.  
+
+```js
+
+```
+
+### Helper Function: nth
+takes a list and a number and returns the element at the given position in the list, or undefined when there is no such element.
+
+```js
+
+```
+
+### Helper Function: Recursie nth  
+```js
+
+```
+
+
+---
