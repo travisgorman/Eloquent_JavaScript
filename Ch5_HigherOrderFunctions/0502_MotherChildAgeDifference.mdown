@@ -23,7 +23,7 @@ function average (array) {
 1. and the result is divided by `array.length` to get the `average`
 
 
-#### GetMotherAge
+##### GetMotherAge
 
 ```js
 function getMotherAge(array) {
