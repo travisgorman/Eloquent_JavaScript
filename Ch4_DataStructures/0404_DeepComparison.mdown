@@ -1,0 +1,27 @@
+# Deep Comparison
+==============================
+Takes two values and returns `true` only if they are the same value or are objects with the same properties whose values are also equal when compared to a recursive call to `deepEqual`.
+
+Use the `typeof` operator to find out whether to compare two things by their *identity* (triple equals) or by looking at their *properties*.  
+
+If "object" for both values, do a deep comparison. Remember that `typeof null` will produce "object".
+
+```js
+function deepEqual(iValP, oValQ){
+
+    if (typeof iValP == "object" && typeof iValQ == "object"){
+        for(var property in iValP){
+            if(iValP[property].toString == iValQ[property].toString){
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+}
+```
+
+1. If `iValP` and `iValQ` are both objects, check properties for equality
+  * Using `toString`, check if `v1.[property]` is equal to `v2.[property]`
+  * If they're equal, `return true`
+  * otherwise, `return false`
