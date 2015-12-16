@@ -1,1 +1,24 @@
+Flattening
+==============================
+Use `reduce` and `concat` to flatten an array of arrays into a single array that has all the elements of the input arrays. 
+
+```js
+function flatten(arr3D) {
+ return arr3D.reduce((a,b) => a.concat(b));
+}
+```
+>```js
+var arrayX = [[1, 2, 3], [4, 5], [6]];
+// → [1, 2, 3, 4, 5, 6]
+```
+
+1. Flatten takes `arr3D`, an array of arrays and reduces it with `concat`
+1. `reduce` goes through the array, working on two elements at a time. 
+  * `a` represents the previous element
+  * `b` represents the current element
+1. What `reduce` does with them depends on what we tell it to do 
+1. In this case we're using the `concat` method, concatenating `a` and `b`
+1. This flattens all collections into one array with all elements intact. 
+
+...
 
