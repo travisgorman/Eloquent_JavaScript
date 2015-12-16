@@ -20,5 +20,6 @@ var arrayX = [[1, 2, 3], [4, 5], [6]];
 1. In this case we're using the `concat` method, concatenating `a` and `b`
 1. This flattens all collections into one array with all elements intact. 
 
-...
+---  
+
 
