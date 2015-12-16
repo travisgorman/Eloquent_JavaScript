@@ -1,0 +1,61 @@
+Mother Child Age Difference
+==============================
+Compute the average age difference between mothers and children (The age of mother when child is born)  
+
+
+
+### Plus (Helper Function)
+==============================
+
+`plus` takes two items `a` and `b` and returns the sum.  
+
+```js
+function plus(a,b) {return a + b;}
+}
+```
+
+
+### Average (Helper Function)
+==============================
+
+```js
+function average (array) {
+  function plus(a,b) { return a + b;}
+  return array.reduce.(plus) / array.length;
+}
+```
+1. Inner function `plus` takes two items `a` and `b` and returns the sum.
+1. Outer function `average` uses `reduce` to sum up all numbers in the array
+1. and the result is divided by `array.length` to get the `average`
+
+
+### GetMotherAge
+==============================
+
+```js
+function getMotherAge(array) {
+  var motherAge = [];
+  array.forEach(function(person){
+    mother = person.mother;
+    var motherBorn;
+    array.forEach(function(otherPerson){
+      if (mother === otherPerson.name) {
+        motherBorn = otherPerson.born;
+      }
+    });
+    // Make sure the year the mother was born was returned, not undefined.
+    if (typeof motherBorn == 'number') {
+      motherAge.push(person.born - motherBorn);
+    }
+  });
+  return motherAge;
+}
+```
+
+```js
+var momAges = getMotherAge(ancestry);
+console.log("#### Mother-child Age Difference ####");
+console.log("The correct answer is: 31.2");
+console.log("My returned answer is: " + average(momAges).toFixed(1));
+console.log("");
+```
