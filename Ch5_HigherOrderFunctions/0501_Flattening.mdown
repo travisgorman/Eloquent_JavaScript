@@ -12,7 +12,7 @@ var arrayX = [[1, 2, 3], [4, 5], [6]];
 // → [1, 2, 3, 4, 5, 6]
 ```
 
-1. Flatten takes `arr3D`, an array of arrays and reduces it with `concat`
+1. Flatten takes `arr3D`, and returns it with a call to `reduce`
 1. `reduce` goes through the array, working on two elements at a time. 
   * `a` represents the previous element
   * `b` represents the current element
