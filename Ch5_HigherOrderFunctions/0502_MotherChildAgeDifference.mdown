@@ -1,12 +1,8 @@
-Mother Child Age Difference
-==============================
+## Mother Child Age Difference
 Compute the average age difference between mothers and children (The age of mother when child is born)  
 
 
-
 ### Plus (Helper Function)
-==============================
-
 `plus` takes two items `a` and `b` and returns the sum.  
 
 ```js
@@ -14,9 +10,7 @@ function plus(a,b) {return a + b;}
 }
 ```
 
-
 ### Average (Helper Function)
-==============================
 
 ```js
 function average (array) {
@@ -30,7 +24,6 @@ function average (array) {
 
 
 ### GetMotherAge
-==============================
 
 ```js
 function getMotherAge(array) {
