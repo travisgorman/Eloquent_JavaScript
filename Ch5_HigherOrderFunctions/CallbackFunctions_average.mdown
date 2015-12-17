@@ -62,12 +62,13 @@ average(ancestry.filter(female).map(age));
 ```
 > 54.55555555555556  
 
+### What's Going on Here?
 
 1. filter `ancestry` by sex, passing a filtering callback into `filter()` 
   * `male()` 
   * or `female()`
 1. call `map()` passing `age()` callback 
-  * `map()` performs `age()` on each object, subtracting birth year from death year, projecting the result into a new array
+  * `map()` performs `age()` on each object, subtracting birth year from death year, projecting the age into a new array
   * Now we have what we need, an array with the ages of all men (or of all women)
 1. pass all this into our `average()` function
 1. `average()` takes the array returned by `map()` and 
