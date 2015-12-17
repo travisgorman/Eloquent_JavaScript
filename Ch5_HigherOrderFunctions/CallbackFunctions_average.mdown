@@ -1,37 +1,37 @@
-# Average Age of Men & Women
-Composing higher order functions to find the average age of men and women in a dataset. 
+# Composing higher order functions.
+Here, I'm using `map()`, `filter()`, and `reduce() to find the average age of men in [`ancestry`](http://eloquentjavascript.net/code/ancestry.js) 
 
 ### Callback Functions
 A few small callback functions I'll be using. `plus()`, `age()`, `male()`, and `female()`  will all be passed into other functions as arguments. 
-##### plus()
+##### plus( )
 `plus()` takes one thing, `a`, and adds it to another thing, `b`. It can be used all over the place. In this case, it will be passed as a callback function that tells `reduce()` what to do as it goes through an array - to add the previous item to the current item until the array is reduced to the sum of all items.
 ```js
 function plus (a, b) { 
   return a + b;
 }
 ```
-##### age()
+##### age( )
 If you have an object with `born` and `died` properties, assuming their values are birth year and death year, `age` will subtract `born` from `died` to return an age. I will be passing it into `map` to create an array of ages, which will be useful because `average()` takes an array as an argument. 
 ```js
 function age (person) {
   return person.died - person.born;
 }
 ```
-##### male()
+##### male( )
 `male` will be passed into `filter` as a criteria. 
 ```js
 function male (person) {
   return person.sex === "m";
 }
 ```
-##### female()
+##### female( )
 `female` will be passed into `filter` as a criteria. 
 ```js
 function female (person) {
   return person.sex === "f";
 }
 ```
-### Average()
+### Average( )
 The `plus` function above is passed into `reduce` as a callback to add up all items in an array.  
 
 ```js
