@@ -1,10 +1,4 @@
-/*
-
- Higher-order functions start to shine when you need to compose functions.
- As an example, let us write code that finds the average age for men and
- for women in the data set.
-
- */
+Composing higher order functions to find the average age of men and women in a dataset. 
 
 ### Callback Functions
 
@@ -28,8 +22,8 @@ function female (person) {
   return person.sex === "f";
 }
 ```
-### Average Function
-In `average`, the `plus` function above is passed into `reduce` as a callback function to add up all items in an array.  
+### Average()
+The `plus` function above is passed into `reduce` as a callback to add up all items in an array.  
 
 ```js
 function average (array) {
@@ -58,21 +52,21 @@ average(ancestry.filter(female).map(age));
 ```
 > 54.55555555555556  
 
-#### Round Average
-
+#### roundAverage()
+The function above works great, but I might not need accuracy out to 15 decimal points, and would rather have a round number to work with. Here, I modified the `average` function with `Math.round` to produce a cleaner answer. 
 ```js
-function average(array){
+function roundAverage(array) {
     function plus(a, b){ return a +b;}
     return Math.round(array.reduce(plus) / array.length);
 }
 ```
-
+Average age of men: 62
 ```js
-average(ancestry.filter(male).map(age));
+roundAverage(ancestry.filter(male).map(age));
 ```
 > 62
-
+Average age of women: 55
 ```js
-average(ancestry.filter(female).map(age));
+roundAverage(ancestry.filter(female).map(age));
 ```
 > 55
