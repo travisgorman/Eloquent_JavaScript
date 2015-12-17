@@ -48,15 +48,8 @@ function average (array) {
 }
 ```
 
-1. filter `ancestry` array for men, passing in `male` callback 
-1. call `map` passing `age` callback - creates array with ages of all men
-1. pass all this into our `average()` function
-1. `average` takes the array returned by `map` and 
-  * uses `reduce()` to find sum
-  * and divides by `array.length` to get an average 
-
-
-#### Average Age of Men
+#### Find Average Age of Men and Women
+Now I have a function that takes an array, and returns the average of all numbers in that array. Now I need an array of the ages of men, and the ages of women to use it on. For narrowing our data down and focusing a specific property like sex, I'll use `filter()` along with projection function `map()` to project our custom `age()` function onto each object and push the result into a new array that can be passed into `average()`. This is all about to go down on one line with 41 characters. 
 
 ```js
 average(ancestry.filter(male).map(age));
@@ -68,6 +61,19 @@ average(ancestry.filter(male).map(age));
 average(ancestry.filter(female).map(age));
 ```
 > 54.55555555555556  
+
+
+1. filter `ancestry` by sex, passing a filtering callback into `filter()` 
+  * `male()` 
+  * or `female()`
+1. call `map()` passing `age()` callback 
+  * `map()` performs `age()` on each object, subtracting birth year from death year, projecting the result into a new array
+  * Now we have what we need, an array with the ages of all men (or of all women)
+1. pass all this into our `average()` function
+1. `average()` takes the array returned by `map()` and 
+  * uses `reduce()` to find sum
+  * and divides by `array.length` to get the average 
+
 
 #### roundAverage( )
 The function above works great, but I might not need accuracy to 15 decimal points, and would rather have a round number to work with. Here, I modified the `average()` function with `Math.round` to produce a cleaner answer. 
