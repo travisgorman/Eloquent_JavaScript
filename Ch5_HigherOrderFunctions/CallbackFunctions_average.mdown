@@ -1,0 +1,78 @@
+/*
+
+ Higher-order functions start to shine when you need to compose functions.
+ As an example, let us write code that finds the average age for men and
+ for women in the data set.
+
+ */
+
+### Callback Functions
+
+```js
+function plus (a, b) { 
+  return a + b;
+}
+```
+```js
+function age (person) {
+  return person.died - person.born;
+}
+```
+```js
+function male (person) {
+  return person.sex === "m";
+}
+```
+```js
+function female (person) {
+  return person.sex === "f";
+}
+```
+### Average Function
+In `average`, the `plus` function above is passed into `reduce` as a callback function to add up all items in an array.  
+
+```js
+function average (array) {
+  return array.reduce(plus) / array.length;
+}
+```
+
+1. filter `ancestry` array for men, passing in `male` callback 
+1. call `map` passing `age` callback - creates array with ages of all men
+1. pass all this into our `average` function
+1. `average` takes the array returned by `map` and 
+  * uses `reduce` to find sum
+  * and divides by `array.length` to get an average 
+
+
+#### Average Age of Men
+
+```js
+average(ancestry.filter(male).map(age));
+```
+> 61.666666666666664  
+
+
+```js
+average(ancestry.filter(female).map(age));
+```
+> 54.55555555555556  
+
+#### Round Average
+
+```js
+function average(array){
+    function plus(a, b){ return a +b;}
+    return Math.round(array.reduce(plus) / array.length);
+}
+```
+
+```js
+average(ancestry.filter(male).map(age));
+```
+> 62
+
+```js
+average(ancestry.filter(female).map(age));
+```
+> 55
