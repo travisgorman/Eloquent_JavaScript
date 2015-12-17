@@ -2,7 +2,8 @@ Composing higher order functions to find the average age of men and women in a d
 
 ### Callback Functions
 ##### plus()
-`plus` takes one thing, `a`, and adds it to another thing, `b`. It can be used all over the place. In this case, it will be passed as a callback function that tells `reduce` what to do as it goes through an array- add the previous value to the current value- until we have the sum of all values in the array.  
+`plus` takes one thing, `a`, and adds it to another thing, `b`. It can be used all over the place. In this case, it will be passed as a callback function that tells `reduce` what to do as it goes through an array- add the previous value to the current value- until we have the sum of all values in the array.
+```js
 function plus (a, b) { 
   return a + b;
 }
