@@ -1,22 +1,28 @@
 Composing higher order functions to find the average age of men and women in a dataset. 
 
 ### Callback Functions
-
-```js
+##### plus()
+`plus` takes one thing, `a`, and adds it to another thing, `b`. It can be used all over the place. In this case, it will be passed as a callback function that tells `reduce` what to do as it goes through an array- add the previous value to the current value- until we have the sum of all values in the array.  
 function plus (a, b) { 
   return a + b;
 }
 ```
+##### age()
+If you have an object with `born` and `died` properties, assuming their values are birth year and death year, `age` will subtract `born` from `died` to return an age. I will be passing it into `map` to create an array of ages, which will be useful because `average()` takes an array as an argument. 
 ```js
 function age (person) {
   return person.died - person.born;
 }
 ```
+##### male()
+`male` will be passed into `filter` as a criteria. 
 ```js
 function male (person) {
   return person.sex === "m";
 }
 ```
+##### female()
+`female` will be passed into `filter` as a criteria. 
 ```js
 function female (person) {
   return person.sex === "f";
