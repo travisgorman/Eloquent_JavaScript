@@ -2,7 +2,7 @@
 Here, I'm using `map()`, `filter()`, and `reduce()` to find the average age of men in the [ancestry](http://eloquentjavascript.net/code/ancestry.js) dataset.
 
 ### Callback Functions
-First I need a few small callback functions. These are the brains of a higher-order function. `plus()`, `age()`, `male()`, and `female()`  will all be passed into other functions as arguments. 
+These are the brains of a higher-order function. `plus()`, `age()`, `male()`, and `female()` will all be passed into other functions as arguments. 
 
 ##### plus( )
 `plus()` takes something, `a`, and adds it to something else, `b`. I'll be passing it as a callback function that directs `reduce()` as it goes through an array - telling it to add the previous item to the current item until the array is reduced to the sum of all items.
