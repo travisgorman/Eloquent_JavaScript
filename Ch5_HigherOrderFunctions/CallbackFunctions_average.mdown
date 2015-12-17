@@ -63,11 +63,12 @@ function roundAverage(array) {
 What is the average age of men?
 ```js
 roundAverage(ancestry.filter(male).map(age));
-// -> 62
 ```
+> 62  
+
 What is the average age of women?
 ```js
 roundAverage(ancestry.filter(female).map(age));
-// -> 62
 ```
+> 55  
 
