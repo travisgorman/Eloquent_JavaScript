@@ -1,5 +1,5 @@
 # Composing higher order functions.
-Here, I'm using `map()`, `filter()`, and `reduce() to find the average age of men in [`ancestry`](http://eloquentjavascript.net/code/ancestry.js) 
+Here, I'm using `map()`, `filter()`, and `reduce() to find the average age of men in [ancestry](http://eloquentjavascript.net/code/ancestry.js) 
 
 ### Callback Functions
 A few small callback functions I'll be using. `plus()`, `age()`, `male()`, and `female()`  will all be passed into other functions as arguments. 
