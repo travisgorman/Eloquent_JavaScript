@@ -30,3 +30,16 @@ We go through all 39 items, checking to see who was born first. On each item in 
   } 
 ]
 ```
+This is how we may have to write it without higher-order functions.
+
+```js
+function oldest() {
+  var min = ancestry[0];
+  for ( var i = 1; i < ancestry.length; i++ ){
+    var cur = ancestry[i];
+    if ( cur.born < min.born ) 
+      min = cur;
+  }  
+  return min;
+}
+```
