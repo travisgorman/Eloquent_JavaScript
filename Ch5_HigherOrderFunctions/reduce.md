@@ -43,3 +43,14 @@ function oldest() {
   return min;
 }
 ```
+`min` starts out as the first item. As we loop the array, when `cur` was born before min, the value held by `min` is replaced by `cur`. This occurs with each item all the way through the array, looking at two items at a time, comparing them to one another, folding the array in on itself, leaving us with the eldest, Pauwells.  
+
+This pattern is abstracted by `reduce()`. 
+
+```js
+ancestry.reduce( (min, cur) => 
+  (cur.born < min.born) ? cur : min );
+```
+
+___
+
